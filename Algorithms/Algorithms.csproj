@@ -44,7 +44,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Helpers\ArrayUtilities.cs" />
+    <Compile Include="Helpers\BinarySearch.cs" />
+    <Compile Include="Helpers\DepthFirstSearch.cs" />
+    <Compile Include="Helpers\Fibonnaci.cs" />
     <Compile Include="Helpers\InfoUtilities.cs" />
+    <Compile Include="Models\Node.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
