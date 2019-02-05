@@ -82,8 +82,19 @@ namespace Algorithms
             //// Palindrome
             //var isPalindrome = Palindrome.IsPalindrome(123321);
 
-            var l1 = new ListNode(2).next = new ListNode(4).next = new ListNode(3);
-            var l2 = new ListNode(5).next = new ListNode(6).next = new ListNode(4);
+            var l1 = new ListNode(2);
+            var l1c1 = new ListNode(4);
+            var l1c2 = new ListNode(3);
+
+            l1.next = l1c1;
+            l1c1.next = l1c2;
+
+            var l2 = new ListNode(5);
+            var l2c1 = new ListNode(6);
+            var l2c2 = new ListNode(4);
+
+            l2.next = l2c1;
+            l2c1.next = l2c2;
         }
     }
 }
