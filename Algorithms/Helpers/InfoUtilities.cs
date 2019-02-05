@@ -26,6 +26,40 @@ namespace Algorithms.Helpers
             return setsOfNumbers;
         }
 
+        public static int[] TwoSum(int[] nums, int target)
+        {
+            // Brute force approach
+            //for (int i = 0; i < nums.Length; i++)
+            //{
+            //    var firstNumber = nums[i];
+            //    for (int j = i + 1; j < nums.Length; j++)
+            //    {
+            //        var secondNumber = nums[j];
+            //        if (firstNumber + secondNumber == target)
+            //        {
+            //            int[] indices = { i, j };
+            //            return indices;
+            //        }
+            //    }
+            //}
+            // Hash table approach
+            var numbersMap = new Dictionary<int, int>();
+            for (int i = 0; i < nums.Length; i++)
+            {
+                numbersMap.Add(nums[i], i);
+            }
+            for (int i = 0; i < nums.Length; i++)
+            {
+                var complement = target - nums[i];
+                
+                if(numbersMap.ContainsKey(complement) && numbersMap[complement] != i)
+                {
+                    return new int[] { i, numbersMap[complement] };
+                }
+            }
+            throw new ArgumentException("Please provide an array and a target to complete the calculation");
+        }
+
         public static List<List<int>> FindAllSumCombinations(List<int> arr, int total)
         {
             var setsOfNumbers = new List<List<int>>();
