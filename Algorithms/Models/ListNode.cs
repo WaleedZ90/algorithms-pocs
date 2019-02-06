@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Algorithms.Helpers.AddTwoNumbers
+namespace Algorithms.Models
 {
     public class ListNode
     {

@@ -43,7 +43,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Helpers\AddTwoNumbers\ListNode.cs" />
+    <Compile Include="Helpers\LinkedLists\CreateLinkedList.cs" />
+    <Compile Include="Helpers\LinkedLists\RemoveNthFromEnd.cs" />
+    <Compile Include="Models\ListNode.cs" />
     <Compile Include="Helpers\ArrayUtilities.cs" />
     <Compile Include="Helpers\BinarySearch.cs" />
     <Compile Include="Helpers\DepthFirstSearch.cs" />

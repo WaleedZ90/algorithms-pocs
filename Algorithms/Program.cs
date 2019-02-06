@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 using Algorithms.Helpers;
-using Algorithms.Helpers.AddTwoNumbers;
+using Algorithms.Helpers.LinkedLists;
 using Algorithms.Models;
 
 namespace Algorithms
@@ -82,19 +82,11 @@ namespace Algorithms
             //// Palindrome
             //var isPalindrome = Palindrome.IsPalindrome(123321);
 
-            var l1 = new ListNode(2);
-            var l1c1 = new ListNode(4);
-            var l1c2 = new ListNode(3);
-
-            l1.next = l1c1;
-            l1c1.next = l1c2;
-
-            var l2 = new ListNode(5);
-            var l2c1 = new ListNode(6);
-            var l2c2 = new ListNode(4);
-
-            l2.next = l2c1;
-            l2c1.next = l2c2;
+            // Create Linked List
+            var arrNumbers = new int[] { 1, 2, 3, 4, 5 };
+            var node = CreateLinkedList.Create(arrNumbers);
+            // Remove nth element in a linked list
+            var nodeToRemove = RemoveNthFromEnd.Remove(node, 2);
         }
     }
 }
