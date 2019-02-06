@@ -11,13 +11,17 @@ namespace Algorithms.Helpers.LinkedLists
     {
         public static ListNode Remove(ListNode head, int n)
         {
+            // Create a dummy node
             var dummy = new ListNode(0);
             int length = 0;
+            // Put the dummy node at the beginning of the linked list
             dummy.next = head;
+            // Calculate the length
             var first = head;
             while (first != null)
             {
                 length++;
+                // Traverse through nodes
                 first = first.next;
             }
 
