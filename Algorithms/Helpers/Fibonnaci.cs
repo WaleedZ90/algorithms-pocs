@@ -8,14 +8,14 @@ namespace Algorithms.Helpers
 {
     public class Fibonnaci
     {
-        public static int Counter { get; set; }
-        public static int Run(int n)
+        static long[] fibCache = new long[200];
+        public static long Run(int n)
         {
-            Counter++;
             if (n <= 1)
-                return 1;
-            var result = Run(n - 1) + Run(n - 2);
-            return result;
+                fibCache[n] = 1;
+            if (fibCache[n] == 0)
+                fibCache[n] = Run(n - 1) + Run(n - 2);
+            return fibCache[n];
         }
     }
 }
